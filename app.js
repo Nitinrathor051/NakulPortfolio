@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
   mediaType: 'video',
   aspectRatio: 'ar-horizontal',
-  videoUrl: "https://res.cloudinary.com/dpdhh76ey/image/upload/v1770872667/main-sample.png",
+  videoUrl: "https://res.cloudinary.com/dpdhh76ey/video/upload/v1770874542/HairstickyLandscape_u2stzf.mp4",
   title: 'Podcast Production Edit',
   contentType: 'Podcast Video Content',
   editingStyle: 'Cinematic Color Grade + Multi-Cam Clean Cuts',
