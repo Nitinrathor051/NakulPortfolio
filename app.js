@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 {
   mediaType: 'video',
   aspectRatio: 'ar-vertical',
-  videoUrl: './Videos/Vertical1 video/AI video.mp4',
+  videoUrl: "https://res.cloudinary.com/dpdhh76ey/video/upload/v1770873454/AI_video_xepfjs.mp4",
   title: 'AI Technology Promo',
   contentType: 'Tech Promotional Reel',
   editingStyle: 'Modern Tech Motion + Clean Cuts',
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 {
   mediaType: 'video',
   aspectRatio: 'ar-vertical',
-  videoUrl: './Videos/Vertical1 video/Clothing .mp4',
+  videoUrl: "https://res.cloudinary.com/dpdhh76ey/video/upload/v1770873719/Clothing_cr5zmm.mp4",
   title: 'Fashion Brand Reel',
   contentType: 'Product Marketing Reel',
   editingStyle: 'Smooth Transitions + Color Boost',
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 {
   mediaType: 'video',
   aspectRatio: 'ar-vertical',
-  videoUrl: './Videos/Vertical1 video/Explainer.mp4',
+  videoUrl: "https://res.cloudinary.com/dpdhh76ey/video/upload/v1770873783/Explainer_dzqm2x.mp4",
   title: 'Business Explainer Reel',
   contentType: 'Explainer Content',
   editingStyle: 'Text Motion + Clean Visual Flow',
