@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nakul Rathore | Professional Video Editor & Creative Post Production</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,500,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dust-background">
+        <video class="dust-bg-video" autoplay loop muted playsinline>
+            <source src="Dust.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="dust-overlay"></div>
+    </div>
+
+    <div class="stars-container">
+        <div id="stars1"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+    <header class="floating-header">
+        <div class="header-container">
+            <button class="logo-btn home-link" id="homeBtn">AEDITOR</button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Our Services</a></li>
+                    <li><a href="#software" class="nav-link">Our Tools</a></li>
+                    <li><a href="#portfolio" class="nav-link">Our Portfolio</a></li>
+                    <li><a href="#stats" class="nav-link">Stats</a></li>
+                    <li><a href="#contact" class="nav-link">Get in Touch</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">NAKUL RATHORE</h1>
+                <h2 class="service-types">Video Editing | Creative Video Production</h2>
+                <p>Transforming ideas into stunning visual experiences that captivate and inspire your audience.</p>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn btn--hero-primary">Get Started</button>
+                <button class="btn btn--hero-outline">View Portfolio</button>
+            </div>
+        </div>
+    </section>
+
+<section id="services" class="services-container">
+    <div class="container" id="services-container-inner">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p>Professional video editing and creative post-production solutions for brands and creators</p>
+        </div>
+
+        <div class="services-grid">
+
+            <!-- Service 1 -->
+            <div class="service-card glass">
+                <div class="service-icon">🎬</div>
+                <h3>Professional Video Editing</h3>
+                <ul class="service-features">
+                    <li>Commercial & Brand Video Editing</li>
+                    <li>YouTube & Content Creator Videos</li>
+                    <li>Social Media Video Production</li>
+                    <li>Seamless Transitions & Motion Graphics</li>
+                    <li>Audio Enhancement & Sound Design</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card glass">
+                <div class="service-icon">✨</div>
+                <h3>Creative Post-Production</h3>
+                <ul class="service-features">
+                    <li>Professional Color Grading</li>
+                    <li>Visual Effects & Motion Design</li>
+                    <li>Subtitle & Caption Integration</li>
+                    <li>Video Optimization for Platforms</li>
+                    <li>Thumbnail & Preview Frame Design</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="software" id="software">
+    <div id="tool-section">
+        <div class="section-header">
+            <h2 class="section-title">Editing Tools</h2>
+            <p>Industry-standard software used to deliver cinematic quality video production</p>
+        </div>
+
+        <div class="software-category">
+            <h3 class="category-title">Video Editing & Post Production</h3>
+
+            <div class="tools-grid">
+
+                <div class="tool-card glass">
+                    <div class="tool-icon">
+                        <img src="./Software icons/Video editing/after-effects_5968428.png"
+                             alt="Adobe After Effects"
+                             class="tool-logo">
+                    </div>
+                    <span class="tool-name">Adobe After Effects</span>
+                </div>
+
+                <div class="tool-card glass">
+                    <div class="tool-icon">
+                        <img src="./Software icons/Video editing/davinci-resolve-logo-hero.png"
+                             alt="DaVinci Resolve"
+                             class="tool-logo">
+                    </div>
+                    <span class="tool-name">DaVinci Resolve</span>
+                </div>
+
+                <div class="tool-card glass">
+                    <div class="tool-icon">
+                        <img src="./Software icons/Video editing/fe973ef75e14e96c5fc5cdf4fcdc0ef4.png"
+                             alt="CapCut"
+                             class="tool-logo">
+                    </div>
+                    <span class="tool-name">CapCut</span>
+                </div>
+
+                <div class="tool-card glass">
+                    <div class="tool-icon">
+                        <img src="./Software icons/Video editing/premiere-pro_9814226.png"
+                             alt="Adobe Premiere Pro"
+                             class="tool-logo">
+                    </div>
+                    <span class="tool-name">Adobe Premiere Pro</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="portfolio">
+    <div class="portfolio-container">
+
+        <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-3">
+                Our Portfolio
+            </h2>
+            <p class="text-lg text-gray-300">
+                Showcase of our best video editing work
+            </p>
+        </div>
+
+        <!-- ✅ THIS IS REQUIRED FOR MAIN PAGE VIDEOS -->
+        <div id="portfolio-categories"></div>
+
+        <div class="flex justify-center mt-16">
+            <button id="viewAllPortfolioBtn" class="btn btn--view-all">
+                View All
+            </button>
+        </div>
+
+    </div>
+</section>
+<!-- FULL PORTFOLIO MODAL -->
+<div id="full-portfolio-modal" class="hidden fixed inset-0 z-50 bg-black/95 backdrop-blur-sm overflow-y-auto">
+    <div class="flex flex-col min-h-screen">
+
+        <!-- Header -->
+        <div class="p-4 sm:p-6 bg-gray-900/50 border-b border-gray-800 shadow-xl flex justify-between items-center">
+            <h3 class="text-white text-lg font-semibold">Video Editing Portfolio</h3>
+            <button id="close-modal-btn" class="p-2 text-white hover:text-red-400 transition" aria-label="Close Portfolio View">
+                ✕
+            </button>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex gap-6 mt-4 border-b border-gray-800 pb-2 px-4">
+            <button class="portfolio-filter-btn text-sm font-medium text-gray-400 hover:text-white transition" data-type="vertical">
+                Short-Form High-Impact
+            </button>
+                        <button class="portfolio-filter-btn text-sm font-medium text-gray-400 hover:text-white transition" data-type="horizontal">
+                Narrative & Long-Form
+            </button>
+        </div>
+
+        <!-- Modal Content -->
+        <div id="modal-content-body" class="flex-1 p-4 sm:p-8">
+            
+            <!-- Short Form Section -->
+            <div class="video-category-section mb-12">
+                <h3 class="video-section-title text-white text-xl mb-4">Short-Form High-Impact Content</h3>
+                <div id="video-editing-vertical-grid" class="portfolio-full-grid"></div>
+            </div>
+
+            <!-- Long Form Section -->
+            <div class="video-category-section">
+                <h3 class="video-section-title text-white text-xl mb-4">Narrative & Long-Form Content</h3>
+                <div id="video-editing-horizontal-grid" class="portfolio-full-grid"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- VIDEO PLAYER MODAL -->
+<div id="video-player-modal" class="hidden fixed inset-0 z-[60] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 transition-opacity duration-300 ease-in-out">
+    <div id="video-modal-content"
+        class="relative w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-4 sm:gap-8 bg-gray-900/60 border border-gray-700 rounded-2xl p-4 sm:p-6 transition-transform duration-300 ease-in-out scale-95">
+
+        <div id="video-player-container"
+            class="flex-grow aspect-video w-full lg:w-auto rounded-lg overflow-hidden shadow-2xl shadow-white/10 border border-white/20">
+        </div>
+
+        <div class="lg:w-80 xl:w-96 flex-shrink-0 text-white space-y-4 sm:space-y-6">
+            <h3 id="video-title-modal" class="text-2xl sm:text-3xl font-bold">Video Title</h3>
+
+            <div class="space-y-3 text-sm sm:text-base">
+                <div>
+                    <p class="text-xs text-gray-300 uppercase tracking-wider font-semibold mb-1">Content Type</p>
+                    <p id="video-content-type-modal" class="text-gray-200"></p>
+                </div>
+
+                <div>
+                    <p class="text-xs text-gray-300 uppercase tracking-wider font-semibold mb-1">Editing Style</p>
+                    <p id="video-editing-style-modal" class="text-gray-200"></p>
+                </div>
+
+                <div>
+                    <p class="text-xs text-gray-300 uppercase tracking-wider font-semibold mb-1">Editing Software</p>
+                    <div id="video-software-modal" class="flex flex-wrap gap-2 mt-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <button id="close-video-modal-btn"
+            class="absolute -top-3 -right-3 z-10 p-2 bg-gray-800 rounded-full text-white hover:bg-red-600 hover:scale-110 transition-all duration-200"
+            aria-label="Close Video Player">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+    </div>
+</div>
+
+
+    <section id="stats" class="stats">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Stats</h2>
+                <p>Proven track record of success</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item glass">
+                    <h3 class="stat-number" data-target="250">0</h3>
+                    <p class="stat-label">Projects Completed</p>
+                </div>
+                <div class="stat-item glass">
+                    <h3 class="stat-number" data-target="50">0</h3>
+                    <p class="stat-label">Happy Clients</p>
+                </div>
+                <div class="stat-item glass">
+                    <h3 class="stat-number" data-target="10">0</h3>
+                    <p class="stat-label">Current Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Testimonials</h2>
+                <p>Trusted by businesses and creators worldwide</p>
+            </div>
+            <div class="testimonials-carousel">
+                <div class="testimonial-track" id="testimonialsTrack">
+                    <div class="testimonial-item glass">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                        <p>"Exceptional quality and incredibly fast turnaround time. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <strong>Alex Johnson</strong>
+                            <span>Tech Startup</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item glass">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                        <p>"Creative solutions that consistently exceed expectations."</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah Chen</strong>
+                            <span>Marketing Agency</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item glass">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                        <p>"Professional service that helped grow our channel significantly."</p>
+                        <div class="testimonial-author">
+                            <strong>Mike Wilson</strong>
+                            <span>Content Creator</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item glass">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                        <p>"Outstanding work that perfectly captured our brand vision."</p>
+                        <div class="testimonial-author">
+                            <strong>Lisa Rodriguez</strong>
+                            <span>Business Owner</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item glass">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                        <p>"Exceptional quality and incredibly fast turnaround time. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <strong>Alex Johnson</strong>
+                            <span>Tech Startup</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item glass">
+                        <div class="testimonial-rating">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                        <p>"Creative solutions that consistently exceed expectations."</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah Chen</strong>
+                            <span>Marketing Agency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p>Ready to start your next project?</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-item glass">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-info">
+                        <h4>Email</h4>
+                        <a href="mailto:rathorenakul340@gmail.com">rathorenakul340@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item glass">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-info">
+                        <h4>Phone</h4>
+                        <a href="tel:+919039943731">+91 9039943731</a>
+                    </div>
+                </div>
+                <div class="contact-item glass">
+                    <div class="contact-icon">🔗</div>
+                    <div class="contact-info">
+                        <h4>LinkedIn</h4>
+                        <a href="https://linkedin.com/in/nakul12" target="_blank">LinkedIn Profile</a>
+                    </div>
+                </div>
+                <div class="contact-item glass">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-info">
+                        <h4>Location</h4>
+                        <span>Gwalior, M.P.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
