@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
   mediaType: 'video',
   aspectRatio: 'ar-horizontal',
-  videoUrl: './Videos/Horizontal1 video/Podcast.mp4',
+  videoUrl: "https://res.cloudinary.com/dpdhh76ey/image/upload/v1770872667/main-sample.png",
   title: 'Podcast Production Edit',
   contentType: 'Podcast Video Content',
   editingStyle: 'Cinematic Color Grade + Multi-Cam Clean Cuts',
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 {
   mediaType: 'video',
   aspectRatio: 'ar-vertical',
-  videoUrl: './Videos/Vertical1 video/Cooking.mp4',
+  videoUrl: "https://res.cloudinary.com/dpdhh76ey/video/upload/v1770874810/Cooking_ecsa8o.mp4",
   title: 'Cooking / Food Reel',
   contentType: 'Food Social Media Content',
   editingStyle: 'Cinematic Food Color Grade + Smooth Cuts',
@@ -86,6 +86,15 @@ document.addEventListener('DOMContentLoaded', () => {
   title: 'Business Explainer Reel',
   contentType: 'Explainer Content',
   editingStyle: 'Text Motion + Clean Visual Flow',
+  editingSoftware: ['After Effects', 'Premiere Pro']
+},
+{
+  mediaType: 'video',
+  aspectRatio: 'ar-vertical',
+  videoUrl: "https://res.cloudinary.com/dpdhh76ey/video/upload/v1770875293/Promo_uozoq2.mp4",
+  title: 'Promo Reel',
+  contentType: 'Promotional Content',
+  editingStyle: 'Dynamic Transitions + Clean Visual Flow',
   editingSoftware: ['After Effects', 'Premiere Pro']
 }
   ],
