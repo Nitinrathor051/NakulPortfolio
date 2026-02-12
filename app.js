@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 {
   mediaType: 'video',
   aspectRatio: 'ar-horizontal',
-  videoUrl: './Videos/Horizontal1 video/HairstickyLandscape.mp4',
+  videoUrl: "https://res.cloudinary.com/dpdhh76ey/video/upload/v1770874542/HairstickyLandscape_u2stzf.mp4",
   title: 'Hair Care Product Commercial',
   contentType: 'Beauty Brand Advertisement',
   editingStyle: 'Commercial Cinematic Look + Smooth Product Focus Transitions',
