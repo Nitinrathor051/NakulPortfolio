@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     return `
-    <div class="portfolio-card ${item.mediaType === 'video' ? 'video-card' : '-card'} rounded-xl overflow-hidden shadow-lg group">
+    <div class="portfolio-card ${item.mediaType === 'video' ? 'video-card' : 'image-card'} rounded-xl overflow-hidden shadow-lg group">
         <div class="relative w-full overflow-hidden cursor-pointer ${item.aspectRatio}" ${clickHandler}>
             
             ${
