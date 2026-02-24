@@ -377,52 +377,70 @@ function loadFullContent() {
 
     
 // --- VIDEO PLAYER LOGIC ---
+function getYoutubeEmbedUrl(rawUrl) {
+    try {
+        const url = new URL(rawUrl);
+        const host = url.hostname.replace('www.', '');
+
+        if (host.includes('youtu.be')) {
+            const id = url.pathname.split('/').filter(Boolean)[0];
+            if (id) return `https://www.youtube.com/embed/${id}`;
+        }
+
+        if (host.includes('youtube.com')) {
+            if (url.pathname.startsWith('/embed/')) {
+                return `https://www.youtube.com${url.pathname}`;
+            }
+
+            const videoId = url.searchParams.get('v');
+            if (videoId) return `https://www.youtube.com/embed/${videoId}`;
+        }
+    } catch (error) {
+        return null;
+    }
+
+    return null;
+}
+
 window.openVideoPlayer = (item) => {
     videoTitleModal.textContent = item.title || 'Portfolio Video';
     videoContentTypeModal.textContent = item.contentType || 'N/A';
     videoEditingStyleModal.textContent = item.editingStyle || 'N/A';
 
     if (item.editingSoftware && item.editingSoftware.length > 0) {
-        videoSoftwareModal.innerHTML = item.editingSoftware.map(software => 
+        videoSoftwareModal.innerHTML = item.editingSoftware.map(software =>
             `<span class="software-tag">${software}</span>`
         ).join('');
     } else {
         videoSoftwareModal.innerHTML = '';
     }
-    
-    // Create player HTML
-    let playerHtml = '';
-    if (item.videoUrl.includes('youtube.com')) {
-        playerHtml = `<iframe src="${item.videoUrl}?autoplay=1&rel=0&modestbranding=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+
+    const isVertical = item.aspectRatio === 'ar-vertical';
+    videoModalContent.classList.toggle('is-vertical', isVertical);
+    videoModalContent.classList.toggle('is-horizontal', !isVertical);
+    videoPlayerContainer.classList.toggle('vertical', isVertical);
+    videoPlayerContainer.classList.toggle('horizontal', !isVertical);
+
+    const youtubeEmbed = getYoutubeEmbedUrl(item.videoUrl || '');
+    if (youtubeEmbed) {
+        videoPlayerContainer.innerHTML = `
+            <iframe
+                src="${youtubeEmbed}?autoplay=1&rel=0&modestbranding=1&playsinline=1"
+                title="${item.title || 'Portfolio Video'}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            ></iframe>
+        `;
     } else {
-        playerHtml = `<video controls autoplay>
-                        <source src="${item.videoUrl}" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>`;
+        videoPlayerContainer.innerHTML = `
+            <video controls autoplay playsinline preload="metadata">
+                <source src="${item.videoUrl}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        `;
     }
-
-    videoPlayerContainer.innerHTML = playerHtml;
-
-    // ⚡ Match the size of the video card on the main page
-    let referenceCard = document.querySelector(`.video-card.${item.aspectRatio} video, .video-card.${item.aspectRatio} iframe`);
-    
-    if(!referenceCard) {
-        // fallback if no reference found
-        referenceCard = document.querySelector('.video-card video, .video-card iframe');
-    }
-
-    if(referenceCard) {
-        const rect = referenceCard.getBoundingClientRect();
-
-        videoPlayerContainer.style.width = `${rect.width}px`;
-        videoPlayerContainer.style.height = `${rect.height}px`;
-    }
-
-    // Ensure media fits container
-    const media = videoPlayerContainer.querySelector('video, iframe');
-    media.style.width = '100%';
-    media.style.height = '100%';
-    media.style.objectFit = 'contain'; // keep aspect ratio without cropping
 
     videoModal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';

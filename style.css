@@ -767,38 +767,90 @@ section {
 /* ------------------------------
    Video Player Modal Video Sizes
 --------------------------------*/
+.video-modal-shell {
+    align-items: flex-start;
+}
+
 #video-player-container {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
     overflow: hidden;
-    background: rgba(0,0,0,0.1);
+    background: #000;
     transition: all 0.3s ease;
-}
-
-/* Horizontal by default */
-#video-player-container.horizontal {
     width: 100%;
-    max-width: 560px;
-    height: 315px; /* 16:9 */
+    margin: 0 auto;
 }
 
-/* Vertical videos */
+/* Horizontal videos (YouTube-like player) */
+#video-player-container.horizontal {
+    aspect-ratio: 16 / 9;
+    max-width: min(100%, 980px);
+}
+
+/* Vertical reel videos */
 #video-player-container.vertical {
-    width: 280px;
-    height: 420px; /* tall like Reels */
+    aspect-ratio: 9 / 16;
+    width: min(100%, 360px);
+    max-height: 78vh;
 }
 
-/* Video/iframe inside modal */
 #video-player-container video,
 #video-player-container iframe {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* keep original aspect ratio, no cropping */
+    object-fit: contain;
     display: block;
     border-radius: 12px;
-    max-height: 80vh; /* prevent overflow */
+}
+
+@media (min-width: 1024px) {
+    .video-modal-shell.is-horizontal {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .video-modal-shell.is-horizontal #video-player-container {
+        flex: 1;
+    }
+
+    .video-modal-shell.is-horizontal .video-meta-panel {
+        width: 320px;
+        flex-shrink: 0;
+    }
+
+    .video-modal-shell.is-vertical {
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 920px;
+    }
+
+    .video-modal-shell.is-vertical #video-player-container {
+        width: 380px;
+        max-height: 82vh;
+    }
+}
+
+@media (max-width: 1023px) {
+    .video-modal-shell {
+        flex-direction: column;
+        max-height: 92vh;
+        overflow-y: auto;
+    }
+
+    .video-modal-shell .video-meta-panel {
+        width: 100%;
+    }
+
+    #video-player-container.horizontal {
+        max-width: 100%;
+    }
+
+    #video-player-container.vertical {
+        width: min(100%, 320px);
+        max-height: 68vh;
+    }
 }
 
 /* Stats Section */
