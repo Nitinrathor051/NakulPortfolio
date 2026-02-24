@@ -220,7 +220,7 @@
 </div>
 
 <!-- VIDEO PLAYER MODAL -->
-<div id="video-player-modal" class="hidden fixed inset-0 z-[60] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 transition-opacity duration-300 ease-in-out">
+<div id="video-player-modal" class="hidden fixed inset-0 z-[60] bg-black/80 backdrop-blur-md flex items-start justify-center p-4 opacity-0 transition-opacity duration-300 ease-in-out">
     <div id="video-modal-content"
         class="video-modal-shell relative w-full max-w-6xl mx-auto flex flex-col gap-4 sm:gap-8 bg-gray-900/60 border border-gray-700 rounded-2xl p-4 sm:p-6 transition-transform duration-300 ease-in-out scale-95">
 
@@ -230,36 +230,20 @@
 
         <div class="video-meta-panel text-white">
             <h3 id="video-title-modal" class="video-meta-title">Video Title</h3>
-
-            <div class="video-meta-grid">
-                <div class="video-meta-item">
-                    <p class="video-meta-label">Content Type</p>
-                    <p id="video-content-type-modal" class="video-meta-value"></p>
-                </div>
-
-                <div class="video-meta-item">
-                    <p class="video-meta-label">Editing Style</p>
-                    <p id="video-editing-style-modal" class="video-meta-value"></p>
-                </div>
-
-                <div class="video-meta-item">
-                    <p class="video-meta-label">Editing Software</p>
-                    <div id="video-software-modal" class="video-software-list"></div>
-                </div>
-            </div>
+            <button id="video-view-more-btn" class="video-view-more-btn" type="button">View more</button>
         </div>
-
-        <button id="close-video-modal-btn"
-            class="absolute p-2 bg-gray-800/95 rounded-full text-white hover:bg-red-600 hover:scale-110 transition-all duration-200"
-            aria-label="Close Video Player">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
-
     </div>
+
+    <button id="close-video-modal-btn"
+        class="fixed p-2 bg-gray-800/95 rounded-full text-white hover:bg-red-600 hover:scale-110 transition-all duration-200"
+        aria-label="Close Video Player">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
 </div>
+
 
 
     <section id="stats" class="stats">

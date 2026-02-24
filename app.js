@@ -19,9 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeVideoModalBtn = document.getElementById('close-video-modal-btn');
     const videoPlayerContainer = document.getElementById('video-player-container');
     const videoTitleModal = document.getElementById('video-title-modal');
-    const videoContentTypeModal = document.getElementById('video-content-type-modal');
-    const videoEditingStyleModal = document.getElementById('video-editing-style-modal');
-    const videoSoftwareModal = document.getElementById('video-software-modal');
+    const videoViewMoreBtn = document.getElementById('video-view-more-btn');
 
     const portfolioData = {
 
@@ -404,15 +402,9 @@ function getYoutubeEmbedUrl(rawUrl) {
 
 window.openVideoPlayer = (item) => {
     videoTitleModal.textContent = item.title || 'Portfolio Video';
-    videoContentTypeModal.textContent = item.contentType || 'N/A';
-    videoEditingStyleModal.textContent = item.editingStyle || 'N/A';
 
-    if (item.editingSoftware && item.editingSoftware.length > 0) {
-        videoSoftwareModal.innerHTML = item.editingSoftware.map(software =>
-            `<span class="software-tag">${software}</span>`
-        ).join('');
-    } else {
-        videoSoftwareModal.innerHTML = '';
+    if (videoViewMoreBtn) {
+        videoViewMoreBtn.onclick = () => window.open(item.videoUrl, '_blank', 'noopener,noreferrer');
     }
 
     const isVertical = item.aspectRatio === 'ar-vertical';
