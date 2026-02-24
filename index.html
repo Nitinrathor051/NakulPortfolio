@@ -220,46 +220,30 @@
 </div>
 
 <!-- VIDEO PLAYER MODAL -->
-<div id="video-player-modal" class="hidden fixed inset-0 z-[60] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 transition-opacity duration-300 ease-in-out">
+<div id="video-player-modal" class="hidden fixed inset-0 z-[60] bg-black/80 backdrop-blur-md flex items-start justify-center p-4 opacity-0 transition-opacity duration-300 ease-in-out">
     <div id="video-modal-content"
-        class="relative w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-4 sm:gap-8 bg-gray-900/60 border border-gray-700 rounded-2xl p-4 sm:p-6 transition-transform duration-300 ease-in-out scale-95">
+        class="video-modal-shell relative w-full max-w-6xl mx-auto flex flex-col gap-4 sm:gap-8 bg-gray-900/60 border border-gray-700 rounded-2xl p-4 sm:p-6 transition-transform duration-300 ease-in-out scale-95">
 
         <div id="video-player-container"
             class="flex-grow aspect-video w-full lg:w-auto rounded-lg overflow-hidden shadow-2xl shadow-white/10 border border-white/20">
         </div>
 
-        <div class="lg:w-80 xl:w-96 flex-shrink-0 text-white space-y-4 sm:space-y-6">
-            <h3 id="video-title-modal" class="text-2xl sm:text-3xl font-bold">Video Title</h3>
-
-            <div class="space-y-3 text-sm sm:text-base">
-                <div>
-                    <p class="text-xs text-gray-300 uppercase tracking-wider font-semibold mb-1">Content Type</p>
-                    <p id="video-content-type-modal" class="text-gray-200"></p>
-                </div>
-
-                <div>
-                    <p class="text-xs text-gray-300 uppercase tracking-wider font-semibold mb-1">Editing Style</p>
-                    <p id="video-editing-style-modal" class="text-gray-200"></p>
-                </div>
-
-                <div>
-                    <p class="text-xs text-gray-300 uppercase tracking-wider font-semibold mb-1">Editing Software</p>
-                    <div id="video-software-modal" class="flex flex-wrap gap-2 mt-2"></div>
-                </div>
-            </div>
+        <div class="video-meta-panel text-white">
+            <h3 id="video-title-modal" class="video-meta-title">Video Title</h3>
+            <button id="video-view-more-btn" class="video-view-more-btn" type="button">View more</button>
         </div>
-
-        <button id="close-video-modal-btn"
-            class="absolute -top-3 -right-3 z-10 p-2 bg-gray-800 rounded-full text-white hover:bg-red-600 hover:scale-110 transition-all duration-200"
-            aria-label="Close Video Player">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
-
     </div>
+
+    <button id="close-video-modal-btn"
+        class="fixed p-2 bg-gray-800/95 rounded-full text-white hover:bg-red-600 hover:scale-110 transition-all duration-200"
+        aria-label="Close Video Player">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
 </div>
+
 
 
     <section id="stats" class="stats">
