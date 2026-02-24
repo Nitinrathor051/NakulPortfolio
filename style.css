@@ -775,7 +775,7 @@ section {
     width: min(100%, 1080px);
     max-height: 92vh;
     overflow-y: auto;
-    padding-top: 3.2rem;
+    padding-top: 1rem;
 }
 
 #video-player-container {
@@ -826,18 +826,65 @@ section {
     max-width: 380px;
 }
 
+
+.video-meta-title {
+    font-size: clamp(1.1rem, 2.1vw, 1.55rem);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    padding-right: 2.6rem;
+}
+
+.video-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.video-meta-item {
+    min-width: 0;
+}
+
+.video-meta-label {
+    font-size: 0.68rem;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.video-meta-value {
+    color: #e5e7eb;
+    font-size: 0.92rem;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.video-software-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    max-height: 2.8rem;
+    overflow: hidden;
+}
+
 #close-video-modal-btn {
-    top: 0.85rem;
-    right: 0.85rem;
-    z-index: 30;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    top: 0.65rem;
+    right: 0.65rem;
+    z-index: 60;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 @media (max-width: 1023px) {
     .video-modal-shell {
         width: 100%;
         max-height: 94vh;
-        padding-top: 2.75rem;
+        padding-top: 0.9rem;
     }
 
     #video-player-container.vertical {
@@ -850,13 +897,27 @@ section {
         padding: 0.95rem;
     }
 
+    .video-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .video-meta-title {
+        font-size: 1.05rem;
+        margin-bottom: 0.55rem;
+    }
+
+    .video-meta-value {
+        font-size: 0.88rem;
+    }
+
     .video-modal-shell.is-vertical .video-meta-panel {
         max-width: min(100%, 330px);
     }
 
     #close-video-modal-btn {
-        top: 0.55rem;
-        right: 0.55rem;
+        top: 0.5rem;
+        right: 0.5rem;
     }
 }
 

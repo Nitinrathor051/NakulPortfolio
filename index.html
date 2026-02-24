@@ -228,23 +228,23 @@
             class="flex-grow aspect-video w-full lg:w-auto rounded-lg overflow-hidden shadow-2xl shadow-white/10 border border-white/20">
         </div>
 
-        <div class="video-meta-panel text-white space-y-4 sm:space-y-6">
-            <h3 id="video-title-modal" class="text-2xl sm:text-3xl font-bold">Video Title</h3>
+        <div class="video-meta-panel text-white">
+            <h3 id="video-title-modal" class="video-meta-title">Video Title</h3>
 
-            <div class="space-y-3 text-sm sm:text-base">
-                <div>
-                    <p class="text-xs text-gray-300 uppercase tracking-wider font-semibold mb-1">Content Type</p>
-                    <p id="video-content-type-modal" class="text-gray-200"></p>
+            <div class="video-meta-grid">
+                <div class="video-meta-item">
+                    <p class="video-meta-label">Content Type</p>
+                    <p id="video-content-type-modal" class="video-meta-value"></p>
                 </div>
 
-                <div>
-                    <p class="text-xs text-gray-300 uppercase tracking-wider font-semibold mb-1">Editing Style</p>
-                    <p id="video-editing-style-modal" class="text-gray-200"></p>
+                <div class="video-meta-item">
+                    <p class="video-meta-label">Editing Style</p>
+                    <p id="video-editing-style-modal" class="video-meta-value"></p>
                 </div>
 
-                <div>
-                    <p class="text-xs text-gray-300 uppercase tracking-wider font-semibold mb-1">Editing Software</p>
-                    <div id="video-software-modal" class="flex flex-wrap gap-2 mt-2"></div>
+                <div class="video-meta-item">
+                    <p class="video-meta-label">Editing Software</p>
+                    <div id="video-software-modal" class="video-software-list"></div>
                 </div>
             </div>
         </div>
